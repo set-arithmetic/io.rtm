@@ -1,4 +1,5 @@
 name: git-auto-commit
+
 on:
   push:
     branches:
